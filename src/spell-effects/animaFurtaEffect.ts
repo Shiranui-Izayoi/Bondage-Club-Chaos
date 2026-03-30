@@ -82,7 +82,6 @@ export class AnimaFurtaEffect extends BaseEffect {
             this.hookFunction(event, "ChatRoomCanAttemptKneel", HookPriority.OVERRIDE_BEHAVIOR, () => false);
             this.hookFunction(event, "Player.CanInteract", HookPriority.OVERRIDE_BEHAVIOR, () => false);
             this.hookFunction(event, "InventoryGroupIsBlockedForCharacter", HookPriority.OVERRIDE_BEHAVIOR, () => true);
-            this.hookFunction(event, "DialogClickExpressionMenu", HookPriority.OVERRIDE_BEHAVIOR, () => false);
             this.hookFunction(event, "ChatRoomMapViewMove", HookPriority.OVERRIDE_BEHAVIOR, () => false);
 
             this.removePacketListener = messagesManager.onPacket("animaFurtaCommand", AnimaFurtaMessageDto, (data: AnimaFurtaMessageDto, sender) => {
